@@ -1,6 +1,14 @@
 #view-new-interpreter
 #view-new-service-order
   
+  &:not(.state-existing)
+    #container-existing-service-order
+      display none
+    
+  &.state-existing
+    #container-new-service-order
+      display none
+  
   .modal
     width 500px
     margin -250px -250px
@@ -36,7 +44,13 @@
       height 80px
       
   .btn
+    cursor pointer
+    display inline-block
+    padding 8px 20px
+    margin 10px 0
     background-color #fff
+    box-shadow 0 1px 2px 2px #eee
+    font-size 13px
       
   #container-new-service-order
   #container-existing-service-order

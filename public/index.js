@@ -881,6 +881,7 @@ calendarView = function (mediator, gregorian) {
   }
 }(mediator, gregorian);
 newInterpreterView = function (router, mediator, authService) {
+  var rootNode = document.getElementById('view-new-interpreter');
   mediator.subscribe('data-interpreter', onGetDataDone);
   function onGetDataDone(obj) {
   }
@@ -891,8 +892,16 @@ newInterpreterView = function (router, mediator, authService) {
   return { getForm: getForm };
 }(router, mediator, authService);
 newServiceOrderView = function (router, mediator, authService) {
-  mediator.subscribe('data-service-order', onGetDataDone);
+  var rootNode = document.getElementById('view-new-service-order');
+  mediator.subscribe('navigate-new-service-order', onNavigate).subscribe('data-service-order', onGetDataDone);
+  function onNavigate(arriving) {
+    if (arriving) {
+      rootNode.classList.remove('state-existing');
+    } else {
+    }
+  }
   function onGetDataDone(obj) {
+    rootNode.classList.add('state-existing');
   }
   function getForm(id) {
     authService.getServiceOrder(id);

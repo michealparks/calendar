@@ -4,14 +4,18 @@ define('newInterpreterView', [
   'authService'
 ], function (router, mediator, authService) {
 
-  mediator.subscribe('data-interpreter', onGetDataDone)
+  var rootNode = document.getElementById('view-new-interpreter');
+
+  mediator
+    .subscribe('data-interpreter', onGetDataDone)
 
   function onGetDataDone (obj) {
 
   }
 
   function getForm (id) {
-    authService.getInterpreter(id)
+    authService.getInterpreter(id);
+
     router.navigate('new-interpreter').check();
   }
   
@@ -26,10 +30,22 @@ define('newServiceOrderView', [
   'authService'
 ], function (router, mediator, authService) {
 
-  mediator.subscribe('data-service-order', onGetDataDone);
+  var rootNode = document.getElementById('view-new-service-order');
+
+  mediator
+    .subscribe('navigate-new-service-order', onNavigate)
+    .subscribe('data-service-order', onGetDataDone);
+
+  function onNavigate (arriving) {
+    if (arriving) {
+      rootNode.classList.remove('state-existing');
+    } else {
+
+    }
+  }
 
   function onGetDataDone (obj) {
-
+    rootNode.classList.add('state-existing');
   }
 
   function getForm (id) {
