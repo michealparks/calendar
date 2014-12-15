@@ -51,6 +51,7 @@
       .container
         .text Schedule
         input
+
     .right
       .container
         .text Schedule Exceptions
@@ -97,13 +98,13 @@
       .container
         .text Interpreter
         select#interpreter-select
-      .container
+      .container-full
         .text Directions
         textarea
-      .container
+      .container-full
         .text Tags
         input
-      .container
+      .container-full
         .text Notes
         textarea
 
@@ -119,15 +120,11 @@
         input(type="checkbox")
         span.text Mark as cancelled
 
-      label
-        input(type="checkbox")
-        span.text Alert: do not provide
-
-      .btn-update Save
-      .btn-duplicate Duplicate
-      .btn-verify Verify
-      .btn-cancel Cancel
-      .btn-confirm Confirm
+      span.btn.btn-update Save
+      span.btn.btn-duplicate Duplicate
+      span.btn.btn-verify Verify
+      span.btn.btn-cancel Cancel
+      span.btn.btn-confirm Confirm
 
 
 

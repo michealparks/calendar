@@ -2,22 +2,44 @@
 #view-new-service-order
   
   .modal
-    width 90%
-    height 510px
-    margin -250px -45%
+    width 500px
+    margin -250px -250px
     
   .text
     font-size 12px
     margin 0 0 5px
     
   input
-    margin 0 0 5px
+    width 100%
+    margin 0 0 10px
     
   .container
+    width 45%
     display inline-block
     
     &:nth-child(even)
       float right
+      clear right
       
     &:nth-child(odd)
       float left
+      clear left
+      
+  .container-full
+    width 100%
+    float left
+    
+    input, textarea
+      width 100%
+      
+    textarea
+      height 80px
+      
+  .btn
+    background-color #fff
+      
+  #container-new-service-order
+  #container-existing-service-order
+    float left
+    clear left
+    position relative
