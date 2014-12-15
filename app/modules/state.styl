@@ -1,0 +1,29 @@
+#app-nir
+  
+  // HTML & CSS parsing
+  &.state-loading
+    display none
+  
+  // Pages
+  #view-auth
+  #view-calendar
+  #view-interpreters
+  #view-service-orders
+  #view-new-interpreter
+  #view-new-service-order
+    display none
+  
+  &.state-view-login #view-auth
+  &.state-view-calendar #view-calendar
+  &.state-view-interpreters #view-interpreters
+  &.state-view-service-orders #view-service-orders
+  &.state-view-new-interpreter #view-new-interpreter
+  &.state-view-new-service-order #view-new-service-order
+    display block
+  
+  // Login 
+  #view-nav
+    display none
+
+  &.state-logged #view-nav
+    display block

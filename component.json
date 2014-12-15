@@ -1,0 +1,14 @@
+{
+  "remotes": [
+    "https://raw.githubusercontent.com"
+  ],
+  "name": "nir",
+  "repo": "michealparks/nir",
+  "version": "0.1.0",
+  "dependencies": {},
+  "scripts": [],
+  "styles": [],
+  "templates": [],
+  "images": [],
+  "fonts": []
+}

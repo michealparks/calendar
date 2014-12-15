@@ -1,0 +1,133 @@
+#view-new-service-order
+
+  .modal
+
+    .left
+      .container
+        .text Date
+        input(type="date")
+      .container
+        .text Company / Office / Practice
+        input
+      .container
+        .text Billing Address
+        input
+      .container
+        .text Suite
+        input
+      .container
+        .text City
+        input
+      .container
+        .text State
+        input
+      .container
+        .text Zip
+        input
+      .container
+        .text Main Phone
+        input
+      .container
+        .text Ext.
+        input
+      .container
+        .text Fax
+        input
+      .container
+        .text Requestor
+        input
+      .container
+        .text Requestor Email
+        input
+      .container
+        .text Requestor Phone
+        input
+      .container
+        .text Ext.
+        input
+      .container
+        .text Date Needing Service
+        input(type="date")
+      .container
+        .text Schedule
+        input
+    .right
+      .container
+        .text Schedule Exceptions
+        input
+      .container
+        .text Last Day of Service
+        input(type="date")
+      .container
+        .text Start Time
+        input
+      .container
+        .text End Time
+        input
+      .container
+        .text Deaf Client / Patient
+        input
+      .container
+        .text Situation
+        input
+      .container
+        .text Location Name
+        input
+      .container
+        .text Location Address
+        input
+      .container
+        .text Location Suite
+        input
+      .container
+        .text City
+        input
+      .container
+        .text State
+        input
+      .container
+        .text Contact Person at Site
+        input
+      .container
+        .text Contact Phone
+        input
+      .container
+        .text Ext.
+        input
+      .container
+        .text Interpreter
+        select#interpreter-select
+      .container
+        .text Directions
+        textarea
+      .container
+        .text Tags
+        input
+      .container
+        .text Notes
+        textarea
+
+    //- New
+    #container-new-service-order
+
+      .btn-add Add
+
+    //- Existing
+    #container-existing-service-order
+
+      label
+        input(type="checkbox")
+        span.text Mark as cancelled
+
+      label
+        input(type="checkbox")
+        span.text Alert: do not provide
+
+      .btn-update Save
+      .btn-duplicate Duplicate
+      .btn-verify Verify
+      .btn-cancel Cancel
+      .btn-confirm Confirm
+
+
+
